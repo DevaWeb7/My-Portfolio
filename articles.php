@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 // اتصال به دیتابیس
 try {
-  $pdo = new PDO("mysql:host=localhost;dbname=articles", "root", "");
+  $pdo = new PDO("mysql:host=localhost;dbname=devaweb1_articles", "rdevaweb1_devaweboot", "2020131377@@NIni");
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   // دریافت همه‌ی مقالات به همراه دسته‌بندی‌ها
