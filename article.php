@@ -1,5 +1,5 @@
 <?php
-$pdo = new PDO("mysql:host=localhost;dbname=devaweb1_articles", "rdevaweb1_devaweboot", "2020131377@@NIni");
+$pdo = new PDO("mysql:host=localhost;dbname=darticles", "root", "");
 $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 
 $stmt = $pdo->prepare("SELECT a.*, c.name AS category FROM articles a LEFT JOIN categories c ON a.category_id = c.id WHERE a.id = ?");
