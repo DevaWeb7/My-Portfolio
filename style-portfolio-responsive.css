@@ -1,0 +1,191 @@
+
+/* === Global Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* === Navigation === */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.logo {
+  font-weight: bold;
+  color: #5e2a2a;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+.menu a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #AF3E3E;
+}
+
+/* === Hero Section === */
+.hero-content {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.hero-img,
+.hero-video {
+  width: min(90%, 700px);
+  height: auto;
+  background-color: #FFE8CD;
+  object-fit: cover;
+  outline: 0.5rem solid #ffffff;
+}
+
+.hero-text {
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  outline: 0.5rem solid #ffffff;
+}
+
+.hero-text h2 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: #333;
+}
+
+/* === Portfolio Section === */
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1rem, 3vw, 4rem);
+  justify-content: center;
+  padding: clamp(1rem, 4vw, 4rem);
+}
+
+.img-template {
+  width: clamp(220px, 28vw, 420px);
+  height: auto;
+  border-radius: 1rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.portfolio-item:hover .img-template {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+/* === About Section === */
+.about-sec.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: clamp(2rem, 5vw, 6rem);
+  gap: 2rem;
+}
+
+.about-me {
+  flex: 1 1 300px;
+  text-align: left;
+}
+
+.image-sec {
+  flex: 1 1 400px;
+  overflow: hidden;
+}
+
+.image-sec img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-left: 2px solid #5e2a2a;
+}
+
+/* === Footer === */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(1rem, 3vw, 4rem);
+  gap: 1rem;
+}
+
+/* === Responsive Media Queries === */
+
+/* تبلت */
+@media (max-width: 1024px) {
+  .navbar { padding: 1rem; }
+  .menu a { margin: 0 0.5rem; }
+  .portfolio { gap: 2rem; }
+}
+
+/* موبایل */
+@media (max-width: 768px) {
+  .hero-content { flex-direction: column; min-height: auto; }
+  .about-sec.container { flex-direction: column; text-align: center; }
+  .img-template { width: 80%; }
+}
+
+/* موبایل کوچک */
+@media (max-width: 480px) {
+  .menu a { margin: 0 0.3rem; font-size: 0.9rem; }
+  .img-template { width: 100%; }
+}
+
+/* لپ‌تاپ بزرگ */
+@media (min-width: 1440px) {
+  .img-template { width: clamp(250px, 22vw, 500px); }
+}
+
+/* مانیتور Full HD */
+@media (min-width: 1920px) {
+  body { font-size: 18px; }
+  .portfolio { gap: clamp(2rem, 3vw, 5rem); }
+  .img-template { width: clamp(300px, 20vw, 600px); }
+}
+
+/* مانیتورهای 4K و UltraWide */
+@media (min-width: 2560px) {
+  body { font-size: 20px; }
+  .portfolio { gap: 4rem; }
+  .img-template { width: clamp(350px, 18vw, 700px); }
+}
