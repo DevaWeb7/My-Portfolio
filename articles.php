@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 // اتصال به دیتابیس
 try {
-  $pdo = new PDO("mysql:host=localhost;dbname=darticles", "root", "");
+  $pdo = new PDO("mysql:host=localhost;dbname=articles", "root", "");
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   // دریافت همه‌ی مقالات به همراه دسته‌بندی‌ها

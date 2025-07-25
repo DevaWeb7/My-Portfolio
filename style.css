@@ -48,8 +48,9 @@ position: fixed;
 /* متن لوگو */
 .logo {
   font-weight: bold;
-  color: #5e2a2a;
+  color: #6e1e1e;
   font-size: 1.2rem;
+  text-decoration: underline;
 }
 
 /* لینک‌های منو */
